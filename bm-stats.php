@@ -18,7 +18,7 @@
 		return 1;
 	}
 
-	$topics['Master/' . NETWORK_ID . '/Session'] = array('qos' => 0, 'function' => 'mqtt_procmsg');
+	$topics['Master/' . NETWORK_ID . '/Session/#'] = array('qos' => 0, 'function' => 'mqtt_procmsg');
 	$mqtt->subscribe($topics, 0);
 
 	echo "starting main loop\n";
