@@ -12,7 +12,7 @@
 	include('functions.inc.php');
 	include(PHPMQTT_PATH);
 
-	$mqtt = new phpMQTT('localhost', 1883, __FILE__);
+	$mqtt = new phpMQTT('localhost', 1883, "Server-API".rand());
 	if (!$mqtt->connect()) {
 		echo "error: can't connect to mqtt\n";
 		return 1;
